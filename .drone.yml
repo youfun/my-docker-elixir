@@ -1,0 +1,30 @@
+---
+kind: pipeline
+type: docker
+name: default
+
+steps:
+  - name: 1.14-build-push
+    image: plugins/docker
+    settings:
+      repo: hentioe/elixir
+      username: hentioe
+      password:
+        from_secret: docker_hub_pass
+      dockerfile: 1.14/otp-26-slim/Dockerfile
+      tags:
+        - 1.14-otp-26-slim
+        - 1.14.5-otp-26-slim
+
+  - name: 1.15-build-push
+    image: plugins/docker
+    settings:
+      repo: hentioe/elixir
+      username: hentioe
+      password:
+        from_secret: docker_hub_pass
+      dockerfile: 1.15/otp-26-slim/Dockerfile
+      tags:
+        - latest
+        - 1.15-otp-26-slim
+        - 1.15.0-rc.0-otp-26-slim
