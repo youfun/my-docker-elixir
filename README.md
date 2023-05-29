@@ -1,6 +1,6 @@
 # my-docker-elixir
 
-My elixir images, they are usually always up to date.
+My Elixir images, they are usually always up to date.
 
 ## Introduction
 
@@ -20,8 +20,8 @@ In addition, you can also use image tags with minor version numbers, such as `1.
 
 ## Advantages
 
-Unlike official images, the images I maintain are based on more specific erlang versions, such as `26.0-slim` instead of `26-slim`. So when erlang releases a new minor version number, I will update all images. In short, the erlang version in the images I maintain is always the latest.
+Unlike official images, the images I maintain are based on more specific Erlang versions, such as `26.0-slim` instead of `26-slim`. So when Erlang releases a new minor version number, I will update all images. In short, the Erlang version in the images I maintain is always the latest.
 
 ## More
 
-- 加入我的 Elixir 交流群：[@elixir_cn_community](https://t.me/elixir_cn_community)
+- 加入我的 Elixir 交流群：[@elixircn_community](https://t.me/elixircn_community)
