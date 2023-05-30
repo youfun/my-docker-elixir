@@ -7,8 +7,8 @@ steps:
   - name: 1.14-build-push
     image: plugins/docker
     settings:
-      repo: hentioe/elixir
-      username: hentioe
+      repo: elixircn/elixir
+      username: elixircn
       password:
         from_secret: docker_hub_pass
       dockerfile: 1.14/otp-26-slim/Dockerfile
@@ -19,8 +19,8 @@ steps:
   - name: 1.15-build-push
     image: plugins/docker
     settings:
-      repo: hentioe/elixir
-      username: hentioe
+      repo: elixircn/elixir
+      username: elixircn
       password:
         from_secret: docker_hub_pass
       dockerfile: 1.15/otp-26-slim/Dockerfile
