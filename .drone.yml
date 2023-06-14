@@ -27,4 +27,4 @@ steps:
       tags:
         - latest
         - 1.15-otp-26-slim
-        - 1.15.0-rc.1-otp-26-slim
+        - 1.15.0-rc.2-otp-26-slim
