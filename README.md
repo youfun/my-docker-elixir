@@ -16,11 +16,11 @@ docker pull elixircn/elixir:1.15-otp-26-slim
 
 Or without any tags, which defaults to the latest version (including RC versions).
 
-In addition, you can also use image tags with minor version numbers, such as `1.15.0-rc.2-otp-26-slim`.
+In addition, you can also use image tags with minor version numbers, such as `1.15.0-otp-26-slim`.
 
 ## Supported tags and respective `Dockerfile` links
 
-- [`1.15.0-rc.2-otp-26-slim, 1.15-otp-26-slim, latest`](https://github.com/elixircn-dev/docker-elixir/blob/main/1.15/otp-26-slim/Dockerfile)
+- [`1.15.0-otp-26-slim, 1.15-otp-26-slim, latest`](https://github.com/elixircn-dev/docker-elixir/blob/main/1.15/otp-26-slim/Dockerfile)
 - [`1.14.5-otp-26-slim, 1.14-otp-26-slim`](https://github.com/elixircn-dev/docker-elixir/blob/main/1.14/otp-26-slim/Dockerfile)
 
 ## Advantages
