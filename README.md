@@ -8,7 +8,7 @@
 
 ## 版本
 
-此仓库通常只维护最新的两个次要 (MINOR) 版本，如当前的 1.15 和 1.14。此仓库的镜像仅建立在本组织所依赖的基础镜像之上，当前它是 Debian（也就是 `-slim`）。目前没有在 `alpine` 等其它基础之上构建新镜像的计划。
+此仓库通常只维护最新的两个次要版本 (MINOR)，如当前的 1.15 和 1.14。此仓库的镜像仅建立在本组织所依赖的基础镜像之上，当前主要以 Debian (`-slim`) 和 Alpine (`-alpine`)。
 
 >由于 Docker Hub 限制了自动构建功能的使用，所以此仓库的镜像是在 CI 服务器上构建并推送的。
 
@@ -25,7 +25,9 @@ docker pull elixircn/elixir:1.15-otp-26-slim
 ## 支持的标签和各自的 `Dockerfile` 链接
 
 - [`1.15.1-otp-26-slim`, `1.15-otp-26-slim`, `latest`](https://github.com/elixircn-dev/docker-elixir/blob/main/1.15/otp-26-slim/Dockerfile)
+- [`1.15.1-otp-26-alpine`, `1.15-otp-26-alpine`](https://github.com/elixircn-dev/docker-elixir/blob/main/1.15/otp-26-alpine/Dockerfile)
 - [`1.14.5-otp-26-slim`, `1.14-otp-26-slim`](https://github.com/elixircn-dev/docker-elixir/blob/main/1.14/otp-26-slim/Dockerfile)
+- [`1.14.5-otp-26-alpine`, `1.14-otp-26-alpine`](https://github.com/elixircn-dev/docker-elixir/blob/main/1.14/otp-26-alpine/Dockerfile)
 
 ## 本地构建
 

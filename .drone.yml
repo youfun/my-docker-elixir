@@ -4,7 +4,7 @@ type: docker
 name: default
 
 steps:
-  - name: 1.14-build-push
+  - name: 1.14-otp-26-slim-build-push
     image: plugins/docker
     settings:
       repo: elixircn/elixir
@@ -16,7 +16,19 @@ steps:
         - 1.14-otp-26-slim
         - 1.14.5-otp-26-slim
 
-  - name: 1.15-build-push
+  - name: 1.14-otp-26-alpine-build-push
+    image: plugins/docker
+    settings:
+      repo: elixircn/elixir
+      username: elixircn
+      password:
+        from_secret: docker_hub_pass
+      dockerfile: 1.14/otp-26-alpine/Dockerfile
+      tags:
+        - 1.14-otp-26-alpine
+        - 1.14.5-otp-26-alpine
+
+  - name: 1.15-otp-26-slim-build-push
     image: plugins/docker
     settings:
       repo: elixircn/elixir
@@ -28,3 +40,15 @@ steps:
         - latest
         - 1.15-otp-26-slim
         - 1.15.1-otp-26-slim
+
+  - name: 1.15-otp-26-alpine-build-push
+    image: plugins/docker
+    settings:
+      repo: elixircn/elixir
+      username: elixircn
+      password:
+        from_secret: docker_hub_pass
+      dockerfile: 1.15/otp-26-alpine/Dockerfile
+      tags:
+        - 1.15-otp-26-alpine
+        - 1.15.1-otp-26-alpine
