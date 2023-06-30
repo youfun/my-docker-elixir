@@ -24,8 +24,8 @@ docker pull elixircn/elixir:1.15-otp-26-slim
 
 ## 支持的标签和各自的 `Dockerfile` 链接
 
-- [`1.15.1-otp-26-slim, 1.15-otp-26-slim, latest`](https://github.com/elixircn-dev/docker-elixir/blob/main/1.15/otp-26-slim/Dockerfile)
-- [`1.14.5-otp-26-slim, 1.14-otp-26-slim`](https://github.com/elixircn-dev/docker-elixir/blob/main/1.14/otp-26-slim/Dockerfile)
+- [`1.15.1-otp-26-slim`, `1.15-otp-26-slim`, `latest`](https://github.com/elixircn-dev/docker-elixir/blob/main/1.15/otp-26-slim/Dockerfile)
+- [`1.14.5-otp-26-slim`, `1.14-otp-26-slim`](https://github.com/elixircn-dev/docker-elixir/blob/main/1.14/otp-26-slim/Dockerfile)
 
 ## 本地构建
 
