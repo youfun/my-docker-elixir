@@ -1,10 +1,10 @@
 # docker-elixir
 
-由 [@elixircn-dev](https://github.com/elixircn-dev) 维护的 Docker 镜像。
+由 [`@elixircn-dev`](https://github.com/elixircn-dev) 维护的 Docker 镜像。
 
 ## 介绍
 
-此仓库所维护的镜像的首要目的是为本组织旗下的项目提供构建和运行基础，同时也为广大 Elixir 开发者提供多个官方镜像之外的新选择。
+此仓库维护的镜像是为本组织旗下的项目提供构建和运行基础，同时也为广大 Elixir 开发者提供多个官方镜像之外的新选择。
 
 ## 版本
 
@@ -20,12 +20,26 @@
 docker pull elixircn/elixir:1.15-otp-26-slim
 ```
 
-也可以不包含任何标签，默认会拉取最新的版本（**包括 RC 版本**）。此外，您还可以使用带有具体的修订版本的镜像标签，例如 `1.15.0-otp-26-slim`。
+也可以不包含任何标签，默认会拉取最新的版本（**包括 RC 版本**）。此外，您还可以使用带有具体的修订版本的镜像标签，例如 `1.15.1-otp-26-slim`。
 
 ## 支持的标签和各自的 `Dockerfile` 链接
 
-- [`1.15.0-otp-26-slim, 1.15-otp-26-slim, latest`](https://github.com/elixircn-dev/docker-elixir/blob/main/1.15/otp-26-slim/Dockerfile)
+- [`1.15.1-otp-26-slim, 1.15-otp-26-slim, latest`](https://github.com/elixircn-dev/docker-elixir/blob/main/1.15/otp-26-slim/Dockerfile)
 - [`1.14.5-otp-26-slim, 1.14-otp-26-slim`](https://github.com/elixircn-dev/docker-elixir/blob/main/1.14/otp-26-slim/Dockerfile)
+
+## 本地构建
+
+拉取本项目到本地，执行 `build.exs` 脚本可快速构建和测试你需要的镜像。
+
+命令语法：`elixir build.exs [version] [base]`，其中 `version` 表示 Elixir 的版本，而 `base` 表示基础镜像。
+
+例子：构建基于 `otp-26-slim` 的 `1.15` 版本镜像：
+
+```bash
+elixir build.exs 1.15 otp-26-slim
+```
+
+如果输出 `Version testing ok` 就表示构建并测试成功，镜像以 `local` 作为组织名。
 
 ## 优势
 
