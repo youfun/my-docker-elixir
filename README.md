@@ -33,15 +33,15 @@ docker pull elixircn/elixir:1.15-otp-26-slim
 
 拉取本项目到本地，执行 `build.exs` 脚本可快速构建和测试你需要的镜像。
 
-命令语法：`elixir build.exs [version] [base]`，其中 `version` 表示 Elixir 的版本，而 `base` 表示基础镜像。
+命令语法：`elixir build.exs [version] [base]`，其中 `version` 表示完整的 Elixir 的版本（包含 `patch` 版本号），而 `base` 表示基础镜像。
 
-例子：构建基于 `otp-26-slim` 的 `1.15` 版本镜像：
+例子：构建基于 `otp-26-slim` 的 `1.15.1` 版本镜像：
 
 ```bash
-elixir build.exs 1.15 otp-26-slim
+elixir build.exs 1.15.1 otp-26-slim
 ```
 
-如果输出 `Version testing ok` 就表示构建并测试成功，镜像以 `local` 作为组织名。
+如果输出 `Version testing ok` 就表示构建并测试成功，生成 `local/elixir:1.15-otp-26-slim` 镜像（注意，标签中不包含 `patch` 版本号）。
 
 ## 优势
 

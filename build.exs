@@ -1,14 +1,23 @@
 defmodule Build do
-  def run([version, base]) do
+  def run([full_version, base]) do
+    {major, minor, _patch} = parse_version(full_version)
+    version = "#{major}.#{minor}"
+
     build_dockerfile(version, base)
 
-    {:ok, version_re} = Regex.compile("Elixir\s#{version}")
+    {:ok, full_version_re} = Regex.compile("Elixir\s#{full_version}")
 
-    if get_version_output(version, base) =~ version_re do
+    if get_version_output(version, base) =~ full_version_re do
       IO.puts("Version testing #{IO.ANSI.green()}ok")
     else
       IO.puts("Version testing #{IO.ANSI.red()}failed")
     end
+  end
+
+  defp parse_version(full_version) do
+    [major, minor, patch] = String.split(full_version, ".")
+
+    {major, minor, patch}
   end
 
   defp build_dockerfile(version, base) do
