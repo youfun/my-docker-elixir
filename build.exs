@@ -8,9 +8,9 @@ defmodule Build do
     {:ok, full_version_re} = Regex.compile("Elixir\s#{full_version}")
 
     if get_version_output(version, base) =~ full_version_re do
-      IO.puts("Version testing #{IO.ANSI.green()}ok")
+      IO.puts("#{IO.ANSI.green()}ok#{IO.ANSI.reset()}")
     else
-      IO.puts("Version testing #{IO.ANSI.red()}failed")
+      IO.puts("test #{IO.ANSI.red()}failed#{IO.ANSI.reset()}")
     end
   end
 
