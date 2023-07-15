@@ -8,7 +8,7 @@
 
 ## 版本
 
-此仓库通常只维护最新的两个次要版本 (MINOR)，如当前的 1.15 和 1.14。此仓库的镜像仅建立在本组织所依赖的基础镜像之上，当前主要以 Debian (`-slim`) 和 Alpine (`-alpine`)。
+此仓库通常只维护最新的两个次要版本 (MINOR)，如当前的 1.15 和 1.14。仅建立在本组织所依赖的基础镜像之上，当前主要是 Debian (`-slim`) 和 Alpine (`-alpine`)。
 
 >由于 Docker Hub 限制了自动构建功能的使用，所以此仓库的镜像是在 CI 服务器上构建并推送的。
 
@@ -20,12 +20,12 @@
 docker pull elixircn/elixir:1.15-otp-26-slim
 ```
 
-也可以不包含任何标签，默认会拉取最新的版本（**包括 RC 版本**）。此外，您还可以使用带有具体的修订版本的镜像标签，例如 `1.15.2-otp-26-slim`。
+也可以不包含任何标签，默认会拉取最新的版本（**包括 RC 版本**）。此外，您还可以使用带有具体的修订版本的镜像标签，例如 `1.15.3-otp-26-slim`。
 
 ## 支持的标签和各自的 `Dockerfile` 链接
 
-- [`1.15.2-otp-26-slim`, `1.15-otp-26-slim`, `latest`](https://github.com/elixircn-dev/docker-elixir/blob/main/1.15/otp-26-slim/Dockerfile)
-- [`1.15.2-otp-26-alpine`, `1.15-otp-26-alpine`](https://github.com/elixircn-dev/docker-elixir/blob/main/1.15/otp-26-alpine/Dockerfile)
+- [`1.15.3-otp-26-slim`, `1.15-otp-26-slim`, `latest`](https://github.com/elixircn-dev/docker-elixir/blob/main/1.15/otp-26-slim/Dockerfile)
+- [`1.15.3-otp-26-alpine`, `1.15-otp-26-alpine`](https://github.com/elixircn-dev/docker-elixir/blob/main/1.15/otp-26-alpine/Dockerfile)
 - [`1.14.5-otp-26-slim`, `1.14-otp-26-slim`](https://github.com/elixircn-dev/docker-elixir/blob/main/1.14/otp-26-slim/Dockerfile)
 - [`1.14.5-otp-26-alpine`, `1.14-otp-26-alpine`](https://github.com/elixircn-dev/docker-elixir/blob/main/1.14/otp-26-alpine/Dockerfile)
 
@@ -35,17 +35,17 @@ docker pull elixircn/elixir:1.15-otp-26-slim
 
 命令语法：`elixir build.exs [version] [base]`，其中 `version` 表示完整的 Elixir 的版本，而 `base` 表示基础镜像。
 
-_[version] 参数必须包含 `patch` 版本号。_
+_`[version]` 参数必须包含 `patch` 版本号。_
 
-例子：构建基于 `otp-26-slim` 的 `1.15.2` 版本镜像：
+例子：构建基于 `otp-26-slim` 的 `1.15.3` 版本镜像：
 
 ```bash
-elixir build.exs 1.15.2 otp-26-slim
+elixir build.exs 1.15.3 otp-26-slim
 ```
 
 若最后一行输出 `ok` 表示构建和测试成功，生成 `local/elixir:1.15-otp-26-slim` 镜像。
 
-_注意，构建完成的本地镜像的标签是不包含 `patch` 版本号的。_
+_注意：构建完成的本地镜像的标签是不包含 `patch` 版本号的。_
 
 ## 优势
 
