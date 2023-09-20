@@ -1,12 +1,12 @@
 FROM erlang:26.0-alpine
 
 # elixir expects utf8.
-ENV ELIXIR_VERSION="v1.15.5" \
+ENV ELIXIR_VERSION="v1.15.6" \
     LANG=C.UTF-8
 
 RUN set -xe \
     && ELIXIR_DOWNLOAD_URL="https://github.com/elixir-lang/elixir/archive/${ELIXIR_VERSION}.tar.gz" \
-    && ELIXIR_DOWNLOAD_SHA256="69f6203eded2d5b2d246c807528f896b3d352141c9cf3e095762748d677c7260" \
+    && ELIXIR_DOWNLOAD_SHA256="385fc1958bcf9023a748acf8c42179a0c6123c89744396840bdcd661ee130177" \
     && buildDeps=' \
     ca-certificates \
     curl \

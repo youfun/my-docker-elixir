@@ -39,7 +39,7 @@ steps:
       tags:
         - latest
         - 1.15-otp-26-slim
-        - 1.15.5-otp-26-slim
+        - 1.15.6-otp-26-slim
 
   - name: 1.15-otp-26-alpine-build-push
     image: plugins/docker
@@ -51,4 +51,4 @@ steps:
       dockerfile: 1.15/otp-26-alpine/Dockerfile
       tags:
         - 1.15-otp-26-alpine
-        - 1.15.5-otp-26-alpine
+        - 1.15.6-otp-26-alpine
