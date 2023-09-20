@@ -1,6 +1,7 @@
 defmodule Build do
   def run([full_version, base]) do
     {major, minor, _patch} = parse_version(full_version)
+
     version = "#{major}.#{minor}"
 
     build_dockerfile(version, base)
