@@ -1,6 +1,6 @@
 # my-docker-elixir
 
-A list of Elixir images maintained by me that are automatically built and pushed to [Docker Hub](https://hub.docker.com/u/hentioe).
+A list of Elixir images maintained by me that are automatically built and pushed to [Docker Hub](https://hub.docker.com/repository/docker/hentioe/elixir).
 
 ## Introduction
 
@@ -24,10 +24,10 @@ You can also pull without specifying any tags, which will default to fetching th
 
 ## Supported tags and respective `Dockerfile` links
 
-- [`1.15.6-otp-26-slim`, `1.15-otp-26-slim`, `latest`](https://github.com/hentioe-dev/docker-elixir/blob/main/1.15/otp-26-slim/Dockerfile)
-- [`1.15.6-otp-26-alpine`, `1.15-otp-26-alpine`](https://github.com/hentioe-dev/docker-elixir/blob/main/1.15/otp-26-alpine/Dockerfile)
-- [`1.14.5-otp-26-slim`, `1.14-otp-26-slim`](https://github.com/hentioe-dev/docker-elixir/blob/main/1.14/otp-26-slim/Dockerfile)
-- [`1.14.5-otp-26-alpine`, `1.14-otp-26-alpine`](https://github.com/hentioe-dev/docker-elixir/blob/main/1.14/otp-26-alpine/Dockerfile)
+- [`1.15.6-otp-26-slim`, `1.15-otp-26-slim`, `latest`](https://github.com/Hentioe/my-docker-elixir/blob/main/1.15/otp-26-slim/Dockerfile)
+- [`1.15.6-otp-26-alpine`, `1.15-otp-26-alpine`](https://github.com/Hentioe/my-docker-elixir/blob/main/1.15/otp-26-alpine/Dockerfile)
+- [`1.14.5-otp-26-slim`, `1.14-otp-26-slim`](https://github.com/Hentioe/my-docker-elixir/blob/main/1.14/otp-26-slim/Dockerfile)
+- [`1.14.5-otp-26-alpine`, `1.14-otp-26-alpine`](https://github.com/Hentioe/my-docker-elixir/blob/main/1.14/otp-26-alpine/Dockerfile)
 
 ## Local build
 
