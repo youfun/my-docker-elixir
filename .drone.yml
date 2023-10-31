@@ -4,29 +4,29 @@ type: docker
 name: default
 
 steps:
-  - name: 1.14-otp-26-slim-build-push
-    image: plugins/docker
-    settings:
-      repo: hentioe/elixir
-      username: hentioe
-      password:
-        from_secret: docker_hub_pass
-      dockerfile: 1.14/otp-26-slim/Dockerfile
-      tags:
-        - 1.14-otp-26-slim
-        - 1.14.5-otp-26-slim
+  # - name: 1.14-otp-26-slim-build-push
+  #   image: plugins/docker
+  #   settings:
+  #     repo: hentioe/elixir
+  #     username: hentioe
+  #     password:
+  #       from_secret: docker_hub_pass
+  #     dockerfile: 1.14/otp-26-slim/Dockerfile
+  #     tags:
+  #       - 1.14-otp-26-slim
+  #       - 1.14.5-otp-26-slim
 
-  - name: 1.14-otp-26-alpine-build-push
-    image: plugins/docker
-    settings:
-      repo: hentioe/elixir
-      username: hentioe
-      password:
-        from_secret: docker_hub_pass
-      dockerfile: 1.14/otp-26-alpine/Dockerfile
-      tags:
-        - 1.14-otp-26-alpine
-        - 1.14.5-otp-26-alpine
+  # - name: 1.14-otp-26-alpine-build-push
+  #   image: plugins/docker
+  #   settings:
+  #     repo: hentioe/elixir
+  #     username: hentioe
+  #     password:
+  #       from_secret: docker_hub_pass
+  #     dockerfile: 1.14/otp-26-alpine/Dockerfile
+  #     tags:
+  #       - 1.14-otp-26-alpine
+  #       - 1.14.5-otp-26-alpine
 
   - name: 1.15-otp-26-slim-build-push
     image: plugins/docker
@@ -37,7 +37,6 @@ steps:
         from_secret: docker_hub_pass
       dockerfile: 1.15/otp-26-slim/Dockerfile
       tags:
-        - latest
         - 1.15-otp-26-slim
         - 1.15.7-otp-26-slim
 
@@ -52,3 +51,28 @@ steps:
       tags:
         - 1.15-otp-26-alpine
         - 1.15.7-otp-26-alpine
+
+  - name: 1.16-otp-26-slim-build-push
+    image: plugins/docker
+    settings:
+      repo: hentioe/elixir
+      username: hentioe
+      password:
+        from_secret: docker_hub_pass
+      dockerfile: 1.16/otp-26-slim/Dockerfile
+      tags:
+        - latest
+        - 1.16-otp-26-slim
+        - 1.16.0-rc.0-otp-26-slim
+
+  - name: 1.16-otp-26-alpine-build-push
+    image: plugins/docker
+    settings:
+      repo: hentioe/elixir
+      username: hentioe
+      password:
+        from_secret: docker_hub_pass
+      dockerfile: 1.16/otp-26-alpine/Dockerfile
+      tags:
+        - 1.16-otp-26-alpine
+        - 1.16.0-rc.0-otp-26-alpine
