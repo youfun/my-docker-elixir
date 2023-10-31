@@ -8,7 +8,7 @@ This series of images is a new choice in addition to the official images. All of
 
 ## Version
 
-This repository typically maintains only the latest two minor versions, such as the current `1.15` and `1.14`. It is built on top of the base images needed by Hentioe, mainly Debian (`-slim`) and Alpine (`-alpine`).
+This repository typically maintains only the latest two minor versions, such as the current `1.16` and `1.15`. It is built on top of the base images needed by Hentioe, mainly Debian (`-slim`) and Alpine (`-alpine`).
 
 >Due to Docker Hub's limitations on the use of automatic build features, the images in this repository are built and pushed from a CI server.
 
@@ -52,4 +52,4 @@ _Note: The label of the completed local image does not include the `patch` versi
 ## Advantages
 
 1. Typically, the versions of images in this repository are updated more quickly because the official image maintainers are slow.
-2. This repository is based on Erlang images I build myself. Similarly, these Erlang image versions are updated more quickly. Importantly, the images in this repository are based on more specific Erlang versions, such as `26.0` rather than just `26`.
+2. This repository is based on Erlang images I build myself. Similarly, these Erlang image versions are updated more quickly. Importantly, the images in this repository are based on more specific Erlang versions, such as `26.1.2` rather than just `26`.
