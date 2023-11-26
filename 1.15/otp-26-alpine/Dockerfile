@@ -1,7 +1,7 @@
 FROM hentioe/erlang:26.1.2-alpine
 
-# elixir expects utf8.
 ENV ELIXIR_VERSION="v1.15.7" \
+    # elixir expects utf8.
     LANG=C.UTF-8
 
 RUN set -xe \
