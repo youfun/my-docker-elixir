@@ -2,7 +2,9 @@ FROM hentioe/erlang:26.1.2-slim
 
 ENV ELIXIR_VERSION="v1.14.5" \
 	# elixir expects utf8.
-	LANG=C.UTF-8
+	LANG=C.UTF-8 \
+	# Fix qemu/arm64 build failed.
+	ERL_FLAGS="+JPperf true"
 
 RUN set -xe \
 	&& ELIXIR_DOWNLOAD_URL="https://github.com/elixir-lang/elixir/archive/${ELIXIR_VERSION}.tar.gz" \

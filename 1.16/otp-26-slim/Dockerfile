@@ -1,6 +1,10 @@
 FROM hentioe/erlang:26.1.2-slim
 
+ARG ERL_FLAGS=""
+
 ENV ELIXIR_VERSION="v1.16.0-rc.0" \
+	# set flags from build_arg.
+	ERL_FLAGS=$ERL_FLAGS \
 	# elixir expects utf8.
 	LANG=C.UTF-8
 
@@ -24,6 +28,7 @@ RUN set -xe \
 	&& find /usr/local/src/elixir/ -type f -not -regex "/usr/local/src/elixir/lib/[^\/]*/lib.*" -exec rm -rf {} + \
 	&& find /usr/local/src/elixir/ -type d -depth -empty -delete \
 	&& apt-get purge -y --auto-remove $buildDeps \
-	&& rm -rf /var/lib/apt/lists/*
+	&& rm -rf /var/lib/apt/lists/* \
+	&& rm -f /tmp/jit-*.dump /tmp/perf-*.map
 
 CMD ["iex"]
