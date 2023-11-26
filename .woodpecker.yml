@@ -1,0 +1,77 @@
+when:
+  - path:
+      exclude: ["README.md", ".drone.yml", "build.exs", "justfile"]
+
+steps:
+  1.15-otp-26-slim-build-push:
+    image: woodpeckerci/plugin-docker-buildx
+    settings:
+      repo: hentioe/elixir
+      username:
+        from_secret: docker_username
+      password:
+        from_secret: docker_password
+      dockerfile: 1.15/otp-26-slim/Dockerfile
+      platforms: linux/arm64/v8
+      no_cache: true
+      tags:
+        - 1.15-otp-26-slim
+        - 1.15.7-otp-26-slim
+    when:
+      branch: main
+      event: push
+
+  1.15-otp-26-alpine-build-push:
+    image: woodpeckerci/plugin-docker-buildx
+    settings:
+      repo: hentioe/elixir
+      username:
+        from_secret: docker_username
+      password:
+        from_secret: docker_password
+      dockerfile: 1.15/otp-26-alpine/Dockerfile
+      platforms: linux/arm64/v8
+      no_cache: true
+      tags:
+        - 1.15-otp-26-alpine
+        - 1.15.7-otp-26-alpine
+    when:
+      branch: main
+      event: push
+
+  1.16-otp-26-slim-build-push:
+    image: woodpeckerci/plugin-docker-buildx
+    settings:
+      repo: hentioe/elixir
+      username:
+        from_secret: docker_username
+      password:
+        from_secret: docker_password
+      dockerfile: 1.16/otp-26-slim/Dockerfile
+      platforms: linux/arm64/v8
+      no_cache: true
+      tags:
+        - latest
+        - 1.16-otp-26-slim
+        - 1.16.0-rc.0-otp-26-slim
+    when:
+      branch: main
+      event: push
+
+  1.16-otp-26-alpine-build-push:
+    image: woodpeckerci/plugin-docker-buildx
+    settings:
+      repo: hentioe/elixir
+      username:
+        from_secret: docker_username
+      password:
+        from_secret: docker_password
+      dockerfile: 1.16/otp-26-alpine/Dockerfile
+      platforms: linux/arm64/v8
+      no_cache: true
+      tags:
+        - 1.16-otp-26-alpine
+        - 1.16.0-rc.0-otp-26-alpine
+    when:
+      branch: main
+      event: push
