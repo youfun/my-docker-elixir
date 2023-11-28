@@ -8,7 +8,7 @@ This series of images is a new choice in addition to the official images. All of
 
 ## Version
 
-This repository typically maintains only the latest two minor versions, such as the current `1.16` and `1.15`. It is built on top of the base images needed by Hentioe, mainly Debian (`-slim`) and Alpine (`-alpine`).
+This repository typically maintains only the latest two minor versions, such as the current `1.16` and `1.15`. It is built on top of the base images needed by Hentioe, mainly Debian (`-slim`), Alpine (`-alpine`) and Void Linux (`-void`).
 
 >Due to Docker Hub's limitations on the use of automatic build features, the images in this repository are built and pushed from a CI server.
 
@@ -26,6 +26,7 @@ You can also pull without specifying any tags, which will default to fetching th
 
 - [`1.16.0-rc.0-otp-26-slim`, `1.16-otp-26-slim`, `latest`](https://github.com/Hentioe/my-docker-elixir/blob/main/1.16/otp-26-slim/Dockerfile)
 - [`1.16.0-rc.0-otp-26-alpine`, `1.16-otp-26-alpine`](https://github.com/Hentioe/my-docker-elixir/blob/main/1.16/otp-26-alpine/Dockerfile)
+- [`1.16.0-rc.0-otp-26-void`, `1.16-otp-26-void`](https://github.com/Hentioe/my-docker-elixir/blob/main/1.16/otp-26-void/Dockerfile)
 - [`1.15.7-otp-26-slim`, `1.15-otp-26-slim`](https://github.com/Hentioe/my-docker-elixir/blob/main/1.15/otp-26-slim/Dockerfile)
 - [`1.15.7-otp-26-alpine`, `1.15-otp-26-alpine`](https://github.com/Hentioe/my-docker-elixir/blob/main/1.15/otp-26-alpine/Dockerfile)
 - [`1.14.5-otp-26-slim`, `1.14-otp-26-slim`](https://github.com/Hentioe/my-docker-elixir/blob/main/1.14/otp-26-slim/Dockerfile)
@@ -56,4 +57,4 @@ _Note: The label of the completed local image does not include the `patch` versi
 
 ## ARM64 support
 
-The `-arm64v8` suffix in the tag name is the image of the arm64 architecture. For some reasons, I had to build them independently.
+The `-arm64` suffix in the tag name is the image of the arm64 architecture. For some reasons, I had to build them independently.
