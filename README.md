@@ -50,11 +50,6 @@ If the last line of the output shows `ok` it indicates a successful build and te
 
 _Note: The label of the completed local image does not include the `patch` version number._
 
-## Advantages
-
-1. Typically, the versions of images in this repository are updated more quickly because the official image maintainers are slow.
-2. This repository is based on Erlang images I build myself. Similarly, these Erlang image versions are updated more quickly. Importantly, the images in this repository are based on more specific Erlang versions, such as `26.1.2` rather than just `26`.
-
 ## ARM64 support
 
 The `-arm64` suffix in the tag name is the image of the arm64 architecture. For some reasons, I had to build them independently.
