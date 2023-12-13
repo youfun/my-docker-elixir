@@ -1,4 +1,4 @@
-FROM hentioe/erlang:26.1.2-void
+FROM hentioe/erlang:26.2-void
 
 ARG ERL_FLAGS=""
 
