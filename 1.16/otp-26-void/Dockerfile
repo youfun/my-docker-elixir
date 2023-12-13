@@ -2,7 +2,7 @@ FROM hentioe/erlang:26.1.2-void
 
 ARG ERL_FLAGS=""
 
-ENV ELIXIR_VERSION="v1.16.0-rc.0" \
+ENV ELIXIR_VERSION="v1.16.0-rc.1" \
 	# set flags from build_arg.
 	ERL_FLAGS=$ERL_FLAGS \
 	# elixir expects utf8.
@@ -10,7 +10,7 @@ ENV ELIXIR_VERSION="v1.16.0-rc.0" \
 
 RUN set -xe \
 	&& ELIXIR_DOWNLOAD_URL="https://github.com/elixir-lang/elixir/archive/${ELIXIR_VERSION}.tar.gz" \
-	&& ELIXIR_DOWNLOAD_SHA256="2dfbe017ccff1b05cacf80d7204b088ab438ec6ff1311a3bd9d33ceb2c26674e" \
+	&& ELIXIR_DOWNLOAD_SHA256="057aca982fd840f2e01c2d60e51523d6870e6937bea58f0e0860d118b7ca2de4" \
 	&& runtimeDeps=' \
 	libstdc++ \
 	libssl3 \
@@ -37,7 +37,7 @@ RUN set -xe \
 	# Clean up
 	&& find /usr/local/src/elixir/ -type f -not -regex "/usr/local/src/elixir/lib/[^\/]*/lib.*" -exec rm -rf {} + \
 	&& find /usr/local/src/elixir/ -type d -depth -empty -delete \
-	&& xbps-remove -ROoy $buildDeps \
+	&& xbps-remove -Ry $buildDeps \
 	# Install runtime dependencies in the back door to avoid being removed by association.
 	&& xbps-install -y $runtimeDeps \ 
 	&& rm elixir-src.tar.gz \

@@ -53,7 +53,7 @@ steps:
   #     tags:
   #       - latest
   #       - 1.16-otp-26-slim
-  #       - 1.16.0-rc.0-otp-26-slim
+  #       - 1.16.0-rc.1-otp-26-slim
   #   when:
   #     branch: main
   #     event: push
@@ -73,7 +73,7 @@ steps:
         - ERL_FLAGS=+JPperf true
       tags:
         - 1.16-otp-26-slim-arm64
-        - 1.16.0-rc.0-otp-26-slim-arm64
+        - 1.16.0-rc.1-otp-26-slim-arm64
     when:
       branch: main
       event: push
@@ -90,7 +90,7 @@ steps:
   #     platforms: linux/amd64
   #     tags:
   #       - 1.16-otp-26-alpine
-  #       - 1.16.0-rc.0-otp-26-alpine
+  #       - 1.16.0-rc.1-otp-26-alpine
   #   when:
   #     branch: main
   #     event: push
@@ -110,7 +110,7 @@ steps:
         - ERL_FLAGS=+JPperf true
       tags:
         - 1.16-otp-26-alpine-arm64
-        - 1.16.0-rc.0-otp-26-alpine-arm64
+        - 1.16.0-rc.1-otp-26-alpine-arm64
     when:
       branch: main
       event: push
@@ -127,7 +127,7 @@ steps:
   #     platforms: linux/amd64
   #     tags:
   #       - 1.16-otp-26-void
-  #       - 1.16.0-rc.0-otp-26-void
+  #       - 1.16.0-rc.1-otp-26-void
   #   when:
   #     branch: main
   #     event: push
@@ -147,7 +147,7 @@ steps:
   #       - ERL_FLAGS=+JPperf true
   #     tags:
   #       - 1.16-otp-26-void-arm64
-  #       - 1.16.0-rc.0-otp-26-void-arm64
+  #       - 1.16.0-rc.1-otp-26-void-arm64
   #   when:
   #     branch: main
   #     event: push

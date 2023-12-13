@@ -20,13 +20,13 @@ Pull the latest image:
 docker pull hentioe/elixir:1.16-otp-26-slim
 ```
 
-You can also pull without specifying any tags, which will default to fetching the latest version, including release candidate (RC) versions. Additionally, you can use image tags with specific revision numbers, such as `1.16.0-rc.0-otp-26-slim`.
+You can also pull without specifying any tags, which will default to fetching the latest version, including release candidate (RC) versions. Additionally, you can use image tags with specific revision numbers, such as `1.16.0-rc.1-otp-26-slim`.
 
 ## Supported tags and respective `Dockerfile` links
 
-- [`1.16.0-rc.0-otp-26-slim`, `1.16-otp-26-slim`, `latest`](https://github.com/Hentioe/my-docker-elixir/blob/main/1.16/otp-26-slim/Dockerfile)
-- [`1.16.0-rc.0-otp-26-alpine`, `1.16-otp-26-alpine`](https://github.com/Hentioe/my-docker-elixir/blob/main/1.16/otp-26-alpine/Dockerfile)
-- [`1.16.0-rc.0-otp-26-void`, `1.16-otp-26-void`](https://github.com/Hentioe/my-docker-elixir/blob/main/1.16/otp-26-void/Dockerfile)
+- [`1.16.0-rc.1-otp-26-slim`, `1.16-otp-26-slim`, `latest`](https://github.com/Hentioe/my-docker-elixir/blob/main/1.16/otp-26-slim/Dockerfile)
+- [`1.16.0-rc.1-otp-26-alpine`, `1.16-otp-26-alpine`](https://github.com/Hentioe/my-docker-elixir/blob/main/1.16/otp-26-alpine/Dockerfile)
+- [`1.16.0-rc.1-otp-26-void`, `1.16-otp-26-void`](https://github.com/Hentioe/my-docker-elixir/blob/main/1.16/otp-26-void/Dockerfile)
 - [`1.15.7-otp-26-slim`, `1.15-otp-26-slim`](https://github.com/Hentioe/my-docker-elixir/blob/main/1.15/otp-26-slim/Dockerfile)
 - [`1.15.7-otp-26-alpine`, `1.15-otp-26-alpine`](https://github.com/Hentioe/my-docker-elixir/blob/main/1.15/otp-26-alpine/Dockerfile)
 - [`1.14.5-otp-26-slim`, `1.14-otp-26-slim`](https://github.com/Hentioe/my-docker-elixir/blob/main/1.14/otp-26-slim/Dockerfile)
@@ -40,10 +40,10 @@ Command Syntax: `elixir build.exs [version] [base]`, where `[version]` represent
 
 _The `[version]` parameter must include the `patch` version number._
 
-Example: Build an image with Elixir version `1.16.0-rc.0` based on `otp-26-slim`:
+Example: Build an image with Elixir version `1.16.0-rc.1` based on `otp-26-slim`:
 
 ```bash
-elixir build.exs 1.16.0-rc.0 otp-26-slim
+elixir build.exs 1.16.0-rc.1 otp-26-slim
 ```
 
 If the last line of the output shows `ok` it indicates a successful build and test. The resulting image will be named `local/elixir:1.15-otp-26-slim`.
