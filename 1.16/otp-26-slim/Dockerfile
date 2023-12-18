@@ -1,4 +1,4 @@
-FROM hentioe/erlang:26.2-slim
+FROM hentioe/erlang:26.2.1-slim
 
 ARG ERL_FLAGS=""
 

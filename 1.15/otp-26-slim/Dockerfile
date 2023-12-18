@@ -1,4 +1,4 @@
-FROM hentioe/erlang:26.2-slim
+FROM hentioe/erlang:26.2.1-slim
 
 ENV ELIXIR_VERSION="v1.15.7" \
 	# elixir expects utf8.
