@@ -3,22 +3,22 @@ when:
       exclude: ["README.md", "build.exs", "justfile"]
 
 steps:
-  1.16-otp-26-void-amd64-build-push:
-    image: woodpeckerci/plugin-docker-buildx
-    settings:
-      repo: hentioe/elixir
-      username:
-        from_secret: docker_username
-      password:
-        from_secret: docker_password
-      dockerfile: 1.16/otp-26-void/Dockerfile
-      platforms: linux/amd64
-      tags:
-        - 1.16-otp-26-void
-        - 1.16.0-rc.1-otp-26-void
-    when:
-      branch: main
-      event: push
+  # 1.16-otp-26-void-amd64-build-push:
+  #   image: woodpeckerci/plugin-docker-buildx
+  #   settings:
+  #     repo: hentioe/elixir
+  #     username:
+  #       from_secret: docker_username
+  #     password:
+  #       from_secret: docker_password
+  #     dockerfile: 1.16/otp-26-void/Dockerfile
+  #     platforms: linux/amd64
+  #     tags:
+  #       - 1.16-otp-26-void
+  #       - 1.16.0-rc.1-otp-26-void
+  #   when:
+  #     branch: main
+  #     event: push
 
   1.16-otp-26-void-arm64-build-push:
     image: woodpeckerci/plugin-docker-buildx
@@ -32,7 +32,7 @@ steps:
       platforms: linux/arm64/v8
       build_args:
         # Fix qemu/arm64 build failed.
-        - ERL_FLAGS=+JPperf true
+        - ERL_FLAGS=+JMsingle true
       tags:
         - 1.16-otp-26-void-arm64
         - 1.16.0-rc.1-otp-26-void-arm64
@@ -40,23 +40,23 @@ steps:
       branch: main
       event: push
 
-  1.16-otp-26-slim-amd64-build-push:
-    image: woodpeckerci/plugin-docker-buildx
-    settings:
-      repo: hentioe/elixir
-      username:
-        from_secret: docker_username
-      password:
-        from_secret: docker_password
-      dockerfile: 1.16/otp-26-slim/Dockerfile
-      platforms: linux/amd64
-      tags:
-        - latest
-        - 1.16-otp-26-slim
-        - 1.16.0-rc.1-otp-26-slim
-    when:
-      branch: main
-      event: push
+  # 1.16-otp-26-slim-amd64-build-push:
+  #   image: woodpeckerci/plugin-docker-buildx
+  #   settings:
+  #     repo: hentioe/elixir
+  #     username:
+  #       from_secret: docker_username
+  #     password:
+  #       from_secret: docker_password
+  #     dockerfile: 1.16/otp-26-slim/Dockerfile
+  #     platforms: linux/amd64
+  #     tags:
+  #       - latest
+  #       - 1.16-otp-26-slim
+  #       - 1.16.0-rc.1-otp-26-slim
+  #   when:
+  #     branch: main
+  #     event: push
 
   1.16-otp-26-slim-arm64-build-push:
     image: woodpeckerci/plugin-docker-buildx
@@ -70,7 +70,7 @@ steps:
       platforms: linux/arm64/v8
       build_args:
         # Fix qemu/arm64 build failed.
-        - ERL_FLAGS=+JPperf true
+        - ERL_FLAGS=+JMsingle true
       tags:
         - 1.16-otp-26-slim-arm64
         - 1.16.0-rc.1-otp-26-slim-arm64
@@ -78,22 +78,22 @@ steps:
       branch: main
       event: push
 
-  1.16-otp-26-alpine-amd64-build-push:
-    image: woodpeckerci/plugin-docker-buildx
-    settings:
-      repo: hentioe/elixir
-      username:
-        from_secret: docker_username
-      password:
-        from_secret: docker_password
-      dockerfile: 1.16/otp-26-alpine/Dockerfile
-      platforms: linux/amd64
-      tags:
-        - 1.16-otp-26-alpine
-        - 1.16.0-rc.1-otp-26-alpine
-    when:
-      branch: main
-      event: push
+  # 1.16-otp-26-alpine-amd64-build-push:
+  #   image: woodpeckerci/plugin-docker-buildx
+  #   settings:
+  #     repo: hentioe/elixir
+  #     username:
+  #       from_secret: docker_username
+  #     password:
+  #       from_secret: docker_password
+  #     dockerfile: 1.16/otp-26-alpine/Dockerfile
+  #     platforms: linux/amd64
+  #     tags:
+  #       - 1.16-otp-26-alpine
+  #       - 1.16.0-rc.1-otp-26-alpine
+  #   when:
+  #     branch: main
+  #     event: push
 
   1.16-otp-26-alpine-arm64-build-push:
     image: woodpeckerci/plugin-docker-buildx
@@ -107,7 +107,7 @@ steps:
       platforms: linux/arm64/v8
       build_args:
         # Fix qemu/arm64 build failed.
-        - ERL_FLAGS=+JPperf true
+        - ERL_FLAGS=+JMsingle true
       tags:
         - 1.16-otp-26-alpine-arm64
         - 1.16.0-rc.1-otp-26-alpine-arm64
