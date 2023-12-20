@@ -52,4 +52,4 @@ _Note: The label of the completed local image does not include the `patch` versi
 
 ## ARM64 support
 
-The `-arm64` suffix in the tag name is the image of the arm64 architecture. For some reasons, I had to build them independently.
+Starting from version 1.16, this repository provides `arm64` builds.
