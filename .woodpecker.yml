@@ -1,7 +1,3 @@
-when:
-  - path:
-      exclude: ["README.md", "build.exs", "justfile"]
-
 steps:
   1.16-otp-26-void-build-push:
     image: woodpeckerci/plugin-docker-buildx
