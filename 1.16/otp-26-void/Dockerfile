@@ -26,6 +26,7 @@ RUN set -xe \
 	glibc-locales \
 	' \
 	&& xbps-install -Sy \
+	&& xbps-install -yu xbps \
 	&& xbps-install -Ay $buildDeps \
 	# Set locale to C.UTF-8 \
 	&& sed -i 's/^#C.UTF-8/C.UTF-8/' /etc/default/libc-locales \
