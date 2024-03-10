@@ -11,7 +11,7 @@ steps:
       platforms: linux/amd64,linux/arm64/v8
       tags:
         - 1.16-otp-26-void
-        - 1.16.1-otp-26-void
+        - 1.16.2-otp-26-void
     when:
       branch: main
       event: push
@@ -28,7 +28,7 @@ steps:
       platforms: linux/amd64,linux/arm64/v8
       tags:
         - 1.16-otp-26-alpine
-        - 1.16.1-otp-26-alpine
+        - 1.16.2-otp-26-alpine
     when:
       branch: main
       event: push
@@ -46,7 +46,7 @@ steps:
       tags:
         - latest
         - 1.16-otp-26-slim
-        - 1.16.1-otp-26-slim
+        - 1.16.2-otp-26-slim
     when:
       branch: main
       event: push
