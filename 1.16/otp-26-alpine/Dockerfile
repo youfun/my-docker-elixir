@@ -1,4 +1,4 @@
-FROM hentioe/erlang:26.2.4-alpine
+FROM hentioe/erlang:26.2.5-alpine
 
 ARG TARGETARCH
 

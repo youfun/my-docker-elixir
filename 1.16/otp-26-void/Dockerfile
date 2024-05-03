@@ -1,4 +1,4 @@
-FROM hentioe/erlang:26.2.4-void
+FROM hentioe/erlang:26.2.5-void
 
 ARG TARGETARCH
 
