@@ -4,9 +4,9 @@ defmodule Build do
   defmodule Version do
     @moduledoc false
 
+    @enforce_keys [:major, :minor, :patch]
     defstruct [:major, :minor, :patch]
 
-    @enforce_keys [:major, :minor, :patch]
     @type t :: %__MODULE__{
             major: non_neg_integer(),
             minor: non_neg_integer(),
