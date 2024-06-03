@@ -10,27 +10,41 @@ This series of images is a new choice in addition to the official images. All of
 
 This repository typically maintains only the latest two minor versions, such as the current `1.16` and `1.15`. It is built on top of the base images needed by Hentioe, mainly Debian (`-slim`), Alpine (`-alpine`) and Void Linux (`-void`).
 
->Due to Docker Hub's limitations on the use of automatic build features, the images in this repository are built and pushed from a CI server.
+> Due to Docker Hub's limitations on the use of automatic build features, the images in this repository are built and pushed from a CI server.
 
 ## Usage
 
 Pull the latest image:
 
 ```bash
-docker pull hentioe/elixir:1.16-otp-26-slim
+docker pull hentioe/elixir:1.17-otp-26-slim
 ```
 
-You can also pull without specifying any tags, which will default to fetching the latest version, including release candidate (RC) versions. Additionally, you can use image tags with specific revision numbers, such as `1.16.3-otp-26-slim`.
+You can also pull without specifying any tags, which will default to fetching the latest version, including release candidate (RC) versions. Additionally, you can use image tags with specific revision numbers, such as `1.17.0-rc.1-otp-27-slim`.
 
 ## Supported tags and respective `Dockerfile` links
 
-- [`1.16.3-otp-26-slim`, `1.16-otp-26-slim`, `latest`](https://github.com/Hentioe/my-docker-elixir/blob/main/1.16/otp-26-slim/Dockerfile)
+- [`1.17.0-rc.1-otp-26-slim`, `1.17-otp-26-slim`, `latest`](https://github.com/Hentioe/my-docker-elixir/blob/main/1.17/otp-26-slim/Dockerfile)
+- [`1.17.0-rc.1-otp-26-alpine`, `1.17-otp-26-alpine`](https://github.com/Hentioe/my-docker-elixir/blob/main/1.17/otp-26-alpine/Dockerfile)
+- [`1.17.0-rc.1-otp-26-void`, `1.17-otp-26-void`](https://github.com/Hentioe/my-docker-elixir/blob/main/1.17/otp-26-void/Dockerfile)
+- [`1.16.3-otp-26-slim`, `1.16-otp-26-slim`](https://github.com/Hentioe/my-docker-elixir/blob/main/1.16/otp-26-slim/Dockerfile)
 - [`1.16.3-otp-26-alpine`, `1.16-otp-26-alpine`](https://github.com/Hentioe/my-docker-elixir/blob/main/1.16/otp-26-alpine/Dockerfile)
 - [`1.16.3-otp-26-void`, `1.16-otp-26-void`](https://github.com/Hentioe/my-docker-elixir/blob/main/1.16/otp-26-void/Dockerfile)
 - [`1.15.7-otp-26-slim`, `1.15-otp-26-slim`](https://github.com/Hentioe/my-docker-elixir/blob/main/1.15/otp-26-slim/Dockerfile)
 - [`1.15.7-otp-26-alpine`, `1.15-otp-26-alpine`](https://github.com/Hentioe/my-docker-elixir/blob/main/1.15/otp-26-alpine/Dockerfile)
-- [`1.14.5-otp-26-slim`, `1.14-otp-26-slim`](https://github.com/Hentioe/my-docker-elixir/blob/main/1.14/otp-26-slim/Dockerfile)
-- [`1.14.5-otp-26-alpine`, `1.14-otp-26-alpine`](https://github.com/Hentioe/my-docker-elixir/blob/main/1.14/otp-26-alpine/Dockerfile)
+
+## Runner Images
+
+Package the `mix release` artifact into the runner image for deployment. The runner image corresponding to each version is:
+
+| image                               | runner base                                        |
+| :---------------------------------- | :------------------------------------------------- |
+| `hentioe/1.17.0-rc.1-otp-26-slim`   | `debian:bookworm`                                  |
+| `hentioe/1.17.0-rc.1-otp-26-void`   | `ghcr.io/void-linux/void-glibc-busybox:20240303R1` |
+| `hentioe/1.17.0-rc.1-otp-26-alpine` | `alpine:3.19`                                      |
+| `hentioe/1.16.3-otp-26-slim`        | `debian:bookworm`                                  |
+| `hentioe/1.16.3-otp-26-void`        | `ghcr.io/void-linux/void-glibc-busybox:20240303R1` |
+| `hentioe/1.16.3-otp-26-alpine`      | `alpine:3.19`                                      |
 
 ## Local build
 
