@@ -1,2 +1,2 @@
 format:
-    mix format build.exs
+    mix format build.exs sha256sum.exs

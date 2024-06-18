@@ -2,7 +2,7 @@ FROM hentioe/erlang:27.0-void
 
 ARG TARGETARCH
 
-ENV ELIXIR_VERSION="v1.17.0" \
+ENV ELIXIR_VERSION="v1.17.1" \
 	# elixir expects utf8. \
 	LANG=C.UTF-8 \
 	# Declare runtime dependencies. \
@@ -19,7 +19,7 @@ RUN set -xe \
 	export ERL_FLAGS="+JMsingle true"; \
 	fi \
 	&& ELIXIR_DOWNLOAD_URL="https://github.com/elixir-lang/elixir/archive/${ELIXIR_VERSION}.tar.gz" \
-	&& ELIXIR_DOWNLOAD_SHA256="558f89cd39458bed1f945d87ad320e5d8f337fa9e627a8479aaefa0494a06ea7" \
+	&& ELIXIR_DOWNLOAD_SHA256="7567c7dcedd5e999d2d41bc2ff70626f49ec283af22eda4f347861bccb34c301" \
 	&& buildDeps=' \
 	curl \
 	make \

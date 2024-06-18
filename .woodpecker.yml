@@ -11,7 +11,7 @@ steps:
       platforms: linux/amd64,linux/arm64/v8
       tags:
         - 1.17-otp-27-void
-        - 1.17.0-otp-27-void
+        - 1.17.1-otp-27-void
     when:
       branch: main
       event: push
@@ -28,7 +28,7 @@ steps:
       platforms: linux/amd64,linux/arm64/v8
       tags:
         - 1.17-otp-27-alpine
-        - 1.17.0-otp-27-alpine
+        - 1.17.1-otp-27-alpine
     when:
       branch: main
       event: push
@@ -46,7 +46,7 @@ steps:
       tags:
         - latest
         - 1.17-otp-27-slim
-        - 1.17.0-otp-27-slim
+        - 1.17.1-otp-27-slim
     when:
       branch: main
       event: push
