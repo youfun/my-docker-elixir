@@ -7,7 +7,7 @@ ENV ELIXIR_VERSION="v1.17.1" \
     LANG=C.UTF-8
 
 RUN set -xe \
-    && if [ "$TARGETARCH" = "$BUILDARCH" ]; then \
+    && if [ "$TARGETARCH" != "$BUILDARCH" ]; then \
     # Avoid QEMU build failed.
     export ERL_FLAGS="+JMsingle true"; \
     fi \
