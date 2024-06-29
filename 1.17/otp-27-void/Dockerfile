@@ -1,6 +1,6 @@
 FROM hentioe/erlang:27.0-void
 
-ARG TARGETARCH
+ARG TARGETARCH BUILDARCH
 
 ENV ELIXIR_VERSION="v1.17.1" \
 	# elixir expects utf8. \
@@ -14,8 +14,8 @@ ENV ELIXIR_VERSION="v1.17.1" \
 	'
 
 RUN set -xe \
-	&& if [ "$TARGETARCH" = "arm64" ]; then \
-	# Avoid QEMU/arm64 build failed. \
+	&& if [ "$TARGETARCH" = "$BUILDARCH" ]; then \
+	# Avoid QEMU build failed.
 	export ERL_FLAGS="+JMsingle true"; \
 	fi \
 	&& ELIXIR_DOWNLOAD_URL="https://github.com/elixir-lang/elixir/archive/${ELIXIR_VERSION}.tar.gz" \
