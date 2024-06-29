@@ -37,12 +37,12 @@ Package the `mix release` artifact into the runner image for deployment. The run
 
 | image                          | runner base                                        |
 | :----------------------------- | :------------------------------------------------- |
-| `hentioe/1.17.1-otp-27-slim`   | `debian:bookworm`                                  |
 | `hentioe/1.17.1-otp-27-void`   | `ghcr.io/void-linux/void-glibc-busybox:20240303R1` |
 | `hentioe/1.17.1-otp-27-alpine` | `alpine:3.19`                                      |
+| `hentioe/1.17.1-otp-27-slim`   | `debian:bookworm`                                  |
+| `hentioe/1.16.3-otp-26-void`   | `ghcr.io/void-linux/void-glibc-busybox:20240526R1` |
+| `hentioe/1.16.3-otp-26-alpine` | `alpine:3.20`                                      |
 | `hentioe/1.16.3-otp-26-slim`   | `debian:bookworm`                                  |
-| `hentioe/1.16.3-otp-26-void`   | `ghcr.io/void-linux/void-glibc-busybox:20240303R1` |
-| `hentioe/1.16.3-otp-26-alpine` | `alpine:3.19`                                      |
 
 ## Local build
 
