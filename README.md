@@ -35,14 +35,14 @@ You can also pull without specifying any tags, which will default to fetching th
 
 Package the `mix release` artifact into the runner image for deployment. The runner image corresponding to each version is:
 
-| image                          | runner base                                        |
-| :----------------------------- | :------------------------------------------------- |
-| `hentioe/1.17.2-otp-27-void`   | `ghcr.io/void-linux/void-glibc-busybox:20240526R1` |
-| `hentioe/1.17.2-otp-27-alpine` | `alpine:3.20`                                      |
-| `hentioe/1.17.2-otp-27-slim`   | `debian:bookworm`                                  |
-| `hentioe/1.16.3-otp-26-void`   | `ghcr.io/void-linux/void-glibc-busybox:20240526R1` |
-| `hentioe/1.16.3-otp-26-alpine` | `alpine:3.20`                                      |
-| `hentioe/1.16.3-otp-26-slim`   | `debian:bookworm`                                  |
+| tag                    | runner base                                        |
+| :--------------------- | :------------------------------------------------- |
+| `1.17.2-otp-27-void`   | `ghcr.io/void-linux/void-glibc-busybox:20240526R1` |
+| `1.17.2-otp-27-alpine` | `alpine:3.20`                                      |
+| `1.17.2-otp-27-slim`   | `debian:bookworm`                                  |
+| `1.16.3-otp-26-void`   | `ghcr.io/void-linux/void-glibc-busybox:20240526R1` |
+| `1.16.3-otp-26-alpine` | `alpine:3.20`                                      |
+| `1.16.3-otp-26-slim`   | `debian:bookworm`                                  |
 
 ## Local build
 
