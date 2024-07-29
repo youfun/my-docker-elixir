@@ -3,7 +3,39 @@ when:
     event: push
 
 steps:
-  1.17-otp-27-void-build-push:
+  # 1.17-otp-27-void-build-push:
+  #   image: reg.hentioe.dev/library/plugin-docker-buildx
+  #   privileged: true
+  #   pull: true
+  #   settings:
+  #     repo: hentioe/elixir
+  #     username:
+  #       from_secret: docker_username
+  #     password:
+  #       from_secret: docker_password
+  #     dockerfile: 1.17/otp-27-void/Dockerfile
+  #     platforms: linux/amd64,linux/arm64/v8
+  #     tags:
+  #       - 1.17-otp-27-void
+  #       - 1.17.2-otp-27-void
+
+  # 1.17-otp-27-alpine-build-push:
+  #   image: reg.hentioe.dev/library/plugin-docker-buildx
+  #   privileged: true
+  #   pull: true
+  #   settings:
+  #     repo: hentioe/elixir
+  #     username:
+  #       from_secret: docker_username
+  #     password:
+  #       from_secret: docker_password
+  #     dockerfile: 1.17/otp-27-alpine/Dockerfile
+  #     platforms: linux/amd64,linux/arm64/v8
+  #     tags:
+  #       - 1.17-otp-27-alpine
+  #       - 1.17.2-otp-27-alpine
+
+  1.17-otp-27-nojit-alpine-build-push:
     image: reg.hentioe.dev/library/plugin-docker-buildx
     privileged: true
     pull: true
@@ -13,153 +45,137 @@ steps:
         from_secret: docker_username
       password:
         from_secret: docker_password
-      dockerfile: 1.17/otp-27-void/Dockerfile
+      dockerfile: 1.17/otp-27-nojit-alpine/Dockerfile
       platforms: linux/amd64,linux/arm64/v8
       tags:
-        - 1.17-otp-27-void
-        - 1.17.2-otp-27-void
+        - 1.17-otp-27-nojit-alpine
+        - 1.17.2-otp-27-nojit-alpine
 
-  1.17-otp-27-alpine-build-push:
-    image: reg.hentioe.dev/library/plugin-docker-buildx
-    privileged: true
-    pull: true
-    settings:
-      repo: hentioe/elixir
-      username:
-        from_secret: docker_username
-      password:
-        from_secret: docker_password
-      dockerfile: 1.17/otp-27-alpine/Dockerfile
-      platforms: linux/amd64,linux/arm64/v8
-      tags:
-        - 1.17-otp-27-alpine
-        - 1.17.2-otp-27-alpine
+  # 1.17-otp-27-slim-build-push:
+  #   image: reg.hentioe.dev/library/plugin-docker-buildx
+  #   privileged: true
+  #   pull: true
+  #   settings:
+  #     repo: hentioe/elixir
+  #     username:
+  #       from_secret: docker_username
+  #     password:
+  #       from_secret: docker_password
+  #     dockerfile: 1.17/otp-27-slim/Dockerfile
+  #     platforms: linux/amd64,linux/arm64/v8
+  #     tags:
+  #       - latest
+  #       - 1.17-otp-27-slim
+  #       - 1.17.2-otp-27-slim
 
-  1.17-otp-27-slim-build-push:
-    image: reg.hentioe.dev/library/plugin-docker-buildx
-    privileged: true
-    pull: true
-    settings:
-      repo: hentioe/elixir
-      username:
-        from_secret: docker_username
-      password:
-        from_secret: docker_password
-      dockerfile: 1.17/otp-27-slim/Dockerfile
-      platforms: linux/amd64,linux/arm64/v8
-      tags:
-        - latest
-        - 1.17-otp-27-slim
-        - 1.17.2-otp-27-slim
+  # 1.16-otp-26-void-build-push:
+  #   image: reg.hentioe.dev/library/plugin-docker-buildx
+  #   privileged: true
+  #   pull: true
+  #   settings:
+  #     repo: hentioe/elixir
+  #     username:
+  #       from_secret: docker_username
+  #     password:
+  #       from_secret: docker_password
+  #     dockerfile: 1.16/otp-26-void/Dockerfile
+  #     platforms: linux/amd64,linux/arm64/v8
+  #     tags:
+  #       - 1.16-otp-26-void
+  #       - 1.16.3-otp-26-void
 
-  1.16-otp-26-void-build-push:
-    image: reg.hentioe.dev/library/plugin-docker-buildx
-    privileged: true
-    pull: true
-    settings:
-      repo: hentioe/elixir
-      username:
-        from_secret: docker_username
-      password:
-        from_secret: docker_password
-      dockerfile: 1.16/otp-26-void/Dockerfile
-      platforms: linux/amd64,linux/arm64/v8
-      tags:
-        - 1.16-otp-26-void
-        - 1.16.3-otp-26-void
+  # 1.16-otp-26-alpine-build-push:
+  #   image: reg.hentioe.dev/library/plugin-docker-buildx
+  #   privileged: true
+  #   pull: true
+  #   settings:
+  #     repo: hentioe/elixir
+  #     username:
+  #       from_secret: docker_username
+  #     password:
+  #       from_secret: docker_password
+  #     dockerfile: 1.16/otp-26-alpine/Dockerfile
+  #     platforms: linux/amd64,linux/arm64/v8
+  #     tags:
+  #       - 1.16-otp-26-alpine
+  #       - 1.16.3-otp-26-alpine
 
-  1.16-otp-26-alpine-build-push:
-    image: reg.hentioe.dev/library/plugin-docker-buildx
-    privileged: true
-    pull: true
-    settings:
-      repo: hentioe/elixir
-      username:
-        from_secret: docker_username
-      password:
-        from_secret: docker_password
-      dockerfile: 1.16/otp-26-alpine/Dockerfile
-      platforms: linux/amd64,linux/arm64/v8
-      tags:
-        - 1.16-otp-26-alpine
-        - 1.16.3-otp-26-alpine
+  # 1.16-otp-26-slim-build-push:
+  #   image: reg.hentioe.dev/library/plugin-docker-buildx
+  #   privileged: true
+  #   pull: true
+  #   settings:
+  #     repo: hentioe/elixir
+  #     username:
+  #       from_secret: docker_username
+  #     password:
+  #       from_secret: docker_password
+  #     dockerfile: 1.16/otp-26-slim/Dockerfile
+  #     platforms: linux/amd64,linux/arm64/v8
+  #     tags:
+  #       - 1.16-otp-26-slim
+  #       - 1.16.3-otp-26-slim
 
-  1.16-otp-26-slim-build-push:
-    image: reg.hentioe.dev/library/plugin-docker-buildx
-    privileged: true
-    pull: true
-    settings:
-      repo: hentioe/elixir
-      username:
-        from_secret: docker_username
-      password:
-        from_secret: docker_password
-      dockerfile: 1.16/otp-26-slim/Dockerfile
-      platforms: linux/amd64,linux/arm64/v8
-      tags:
-        - 1.16-otp-26-slim
-        - 1.16.3-otp-26-slim
+  # 1.15-otp-26-slim-amd64-build-push:
+  #   image: reg.hentioe.dev/library/plugin-docker-buildx
+  #   privileged: true
+  #   pull: true
+  #   settings:
+  #     repo: hentioe/elixir
+  #     username:
+  #       from_secret: docker_username
+  #     password:
+  #       from_secret: docker_password
+  #     dockerfile: 1.15/otp-26-slim/Dockerfile
+  #     platforms: linux/amd64
+  #     tags:
+  #       - 1.15-otp-26-slim
+  #       - 1.15.8-otp-26-slim
 
-  1.15-otp-26-slim-amd64-build-push:
-    image: reg.hentioe.dev/library/plugin-docker-buildx
-    privileged: true
-    pull: true
-    settings:
-      repo: hentioe/elixir
-      username:
-        from_secret: docker_username
-      password:
-        from_secret: docker_password
-      dockerfile: 1.15/otp-26-slim/Dockerfile
-      platforms: linux/amd64
-      tags:
-        - 1.15-otp-26-slim
-        - 1.15.8-otp-26-slim
+  # 1.15-otp-26-alpine-amd64-build-push:
+  #   image: reg.hentioe.dev/library/plugin-docker-buildx
+  #   privileged: true
+  #   pull: true
+  #   settings:
+  #     repo: hentioe/elixir
+  #     username:
+  #       from_secret: docker_username
+  #     password:
+  #       from_secret: docker_password
+  #     dockerfile: 1.15/otp-26-alpine/Dockerfile
+  #     platforms: linux/amd64
+  #     tags:
+  #       - 1.15-otp-26-alpine
+  #       - 1.15.8-otp-26-alpine
 
-  1.15-otp-26-alpine-amd64-build-push:
-    image: reg.hentioe.dev/library/plugin-docker-buildx
-    privileged: true
-    pull: true
-    settings:
-      repo: hentioe/elixir
-      username:
-        from_secret: docker_username
-      password:
-        from_secret: docker_password
-      dockerfile: 1.15/otp-26-alpine/Dockerfile
-      platforms: linux/amd64
-      tags:
-        - 1.15-otp-26-alpine
-        - 1.15.8-otp-26-alpine
+  # 1.14-otp-26-slim-amd64-build-push:
+  #   image: reg.hentioe.dev/library/plugin-docker-buildx
+  #   privileged: true
+  #   pull: true
+  #   settings:
+  #     repo: hentioe/elixir
+  #     username:
+  #       from_secret: docker_username
+  #     password:
+  #       from_secret: docker_password
+  #     dockerfile: 1.14/otp-26-slim/Dockerfile
+  #     platforms: linux/amd64
+  #     tags:
+  #       - 1.14-otp-26-slim
+  #       - 1.14.5-otp-26-slim
 
-  1.14-otp-26-slim-amd64-build-push:
-    image: reg.hentioe.dev/library/plugin-docker-buildx
-    privileged: true
-    pull: true
-    settings:
-      repo: hentioe/elixir
-      username:
-        from_secret: docker_username
-      password:
-        from_secret: docker_password
-      dockerfile: 1.14/otp-26-slim/Dockerfile
-      platforms: linux/amd64
-      tags:
-        - 1.14-otp-26-slim
-        - 1.14.5-otp-26-slim
-
-  1.14-otp-26-alpine-amd64-build-push:
-    image: reg.hentioe.dev/library/plugin-docker-buildx
-    privileged: true
-    pull: true
-    settings:
-      repo: hentioe/elixir
-      username:
-        from_secret: docker_username
-      password:
-        from_secret: docker_password
-      dockerfile: 1.14/otp-26-alpine/Dockerfile
-      platforms: linux/amd64
-      tags:
-        - 1.14-otp-26-alpine
-        - 1.14.5-otp-26-alpine
+  # 1.14-otp-26-alpine-amd64-build-push:
+  #   image: reg.hentioe.dev/library/plugin-docker-buildx
+  #   privileged: true
+  #   pull: true
+  #   settings:
+  #     repo: hentioe/elixir
+  #     username:
+  #       from_secret: docker_username
+  #     password:
+  #       from_secret: docker_password
+  #     dockerfile: 1.14/otp-26-alpine/Dockerfile
+  #     platforms: linux/amd64
+  #     tags:
+  #       - 1.14-otp-26-alpine
+  #       - 1.14.5-otp-26-alpine
