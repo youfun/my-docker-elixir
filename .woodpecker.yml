@@ -3,7 +3,7 @@ when:
     event: push
 
 steps:
-  1.17-otp-27-void-build-push:
+  1.18-otp-27-void-build-push:
     image: reg.hentioe.dev/library/plugin-docker-buildx
     privileged: true
     pull: true
@@ -13,13 +13,13 @@ steps:
         from_secret: docker_username
       password:
         from_secret: docker_password
-      dockerfile: 1.17/otp-27-void/Dockerfile
+      dockerfile: 1.18/otp-27-void/Dockerfile
       platforms: linux/amd64,linux/arm64/v8
       tags:
-        - 1.17-otp-27-void
-        - 1.17.3-otp-27-void
+        - 1.18-otp-27-void
+        - 1.18.1-otp-27-void
 
-  1.17-otp-27-alpine-build-push:
+  1.18-otp-27-alpine-build-push:
     image: reg.hentioe.dev/library/plugin-docker-buildx
     privileged: true
     pull: true
@@ -29,13 +29,13 @@ steps:
         from_secret: docker_username
       password:
         from_secret: docker_password
-      dockerfile: 1.17/otp-27-alpine/Dockerfile
+      dockerfile: 1.18/otp-27-alpine/Dockerfile
       platforms: linux/amd64,linux/arm64/v8
       tags:
-        - 1.17-otp-27-alpine
-        - 1.17.3-otp-27-alpine
+        - 1.18-otp-27-alpine
+        - 1.18.1-otp-27-alpine
 
-  1.17-otp-27-nojit-alpine-build-push:
+  1.18-otp-27-nojit-alpine-build-push:
     image: reg.hentioe.dev/library/plugin-docker-buildx
     privileged: true
     pull: true
@@ -45,13 +45,13 @@ steps:
         from_secret: docker_username
       password:
         from_secret: docker_password
-      dockerfile: 1.17/otp-27-nojit-alpine/Dockerfile
+      dockerfile: 1.18/otp-27-nojit-alpine/Dockerfile
       platforms: linux/amd64,linux/arm64/v8
       tags:
-        - 1.17-otp-27-nojit-alpine
-        - 1.17.3-otp-27-nojit-alpine
+        - 1.18-otp-27-nojit-alpine
+        - 1.18.1-otp-27-nojit-alpine
 
-  1.17-otp-27-slim-build-push:
+  1.18-otp-27-slim-build-push:
     image: reg.hentioe.dev/library/plugin-docker-buildx
     privileged: true
     pull: true
@@ -61,12 +61,76 @@ steps:
         from_secret: docker_username
       password:
         from_secret: docker_password
-      dockerfile: 1.17/otp-27-slim/Dockerfile
+      dockerfile: 1.18/otp-27-slim/Dockerfile
       platforms: linux/amd64,linux/arm64/v8
       tags:
         - latest
-        - 1.17-otp-27-slim
-        - 1.17.3-otp-27-slim
+        - 1.18-otp-27-slim
+        - 1.18.1-otp-27-slim
+
+  # 1.17-otp-27-void-build-push:
+  #   image: reg.hentioe.dev/library/plugin-docker-buildx
+  #   privileged: true
+  #   pull: true
+  #   settings:
+  #     repo: hentioe/elixir
+  #     username:
+  #       from_secret: docker_username
+  #     password:
+  #       from_secret: docker_password
+  #     dockerfile: 1.17/otp-27-void/Dockerfile
+  #     platforms: linux/amd64,linux/arm64/v8
+  #     tags:
+  #       - 1.17-otp-27-void
+  #       - 1.17.3-otp-27-void
+
+  # 1.17-otp-27-alpine-build-push:
+  #   image: reg.hentioe.dev/library/plugin-docker-buildx
+  #   privileged: true
+  #   pull: true
+  #   settings:
+  #     repo: hentioe/elixir
+  #     username:
+  #       from_secret: docker_username
+  #     password:
+  #       from_secret: docker_password
+  #     dockerfile: 1.17/otp-27-alpine/Dockerfile
+  #     platforms: linux/amd64,linux/arm64/v8
+  #     tags:
+  #       - 1.17-otp-27-alpine
+  #       - 1.17.3-otp-27-alpine
+
+  # 1.17-otp-27-nojit-alpine-build-push:
+  #   image: reg.hentioe.dev/library/plugin-docker-buildx
+  #   privileged: true
+  #   pull: true
+  #   settings:
+  #     repo: hentioe/elixir
+  #     username:
+  #       from_secret: docker_username
+  #     password:
+  #       from_secret: docker_password
+  #     dockerfile: 1.17/otp-27-nojit-alpine/Dockerfile
+  #     platforms: linux/amd64,linux/arm64/v8
+  #     tags:
+  #       - 1.17-otp-27-nojit-alpine
+  #       - 1.17.3-otp-27-nojit-alpine
+
+  # 1.17-otp-27-slim-build-push:
+  #   image: reg.hentioe.dev/library/plugin-docker-buildx
+  #   privileged: true
+  #   pull: true
+  #   settings:
+  #     repo: hentioe/elixir
+  #     username:
+  #       from_secret: docker_username
+  #     password:
+  #       from_secret: docker_password
+  #     dockerfile: 1.17/otp-27-slim/Dockerfile
+  #     platforms: linux/amd64,linux/arm64/v8
+  #     tags:
+  #       - 1.17-otp-27-slim
+  #       - 1.17.3-otp-27-slim
 
   # 1.16-otp-26-void-build-push:
   #   image: reg.hentioe.dev/library/plugin-docker-buildx
