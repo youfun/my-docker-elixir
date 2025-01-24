@@ -1,4 +1,4 @@
-FROM hentioe/erlang:27.2-slim
+FROM hentioe/erlang:27.2.1-slim
 
 ARG TARGETARCH BUILDARCH
 
