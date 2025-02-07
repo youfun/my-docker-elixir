@@ -37,10 +37,10 @@ Package the `mix release` artifact into the runner image for deployment. The run
 
 | tag                    | runner base                                        |
 | :--------------------- | :------------------------------------------------- |
-| `1.18.2-otp-27-void`   | `ghcr.io/void-linux/void-glibc-busybox:20250112R1` |
+| `1.18.2-otp-27-void`   | `ghcr.io/void-linux/void-glibc-busybox:20250201R1` |
 | `1.18.2-otp-27-alpine` | `alpine:3.21`                                      |
 | `1.18.2-otp-27-slim`   | `debian:bookworm`                                  |
-| `1.17.3-otp-27-void`   | `ghcr.io/void-linux/void-glibc-busybox:20250112R1` |
+| `1.17.3-otp-27-void`   | `ghcr.io/void-linux/void-glibc-busybox:20250201R1` |
 | `1.17.3-otp-27-alpine` | `alpine:3.21`                                      |
 | `1.17.3-otp-27-slim`   | `debian:bookworm`                                  |
 
