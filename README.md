@@ -17,16 +17,16 @@ This repository typically maintains only the latest two minor versions, such as 
 Pull the latest image:
 
 ```bash
-docker pull hentioe/elixir:1.18.2-otp-27-slim
+docker pull hentioe/elixir:1.18.3-otp-27-slim
 ```
 
 You can also pull without specifying any tags, which will default to fetching the latest version, including release candidate (RC) versions. Additionally, you can use image tags with specific revision numbers, such as `1.17.3-otp-27-slim`.
 
 ## Supported tags and respective `Dockerfile` links
 
-- [`1.18.2-otp-27-slim`, `1.18-otp-26-slim`, `latest`](https://github.com/Hentioe/my-docker-elixir/blob/main/1.18/otp-27-slim/Dockerfile)
-- [`1.18.2-otp-27-alpine`, `1.18-otp-26-alpine`](https://github.com/Hentioe/my-docker-elixir/blob/main/1.18/otp-27-alpine/Dockerfile)
-- [`1.18.2-otp-27-void`, `1.18-otp-26-void`](https://github.com/Hentioe/my-docker-elixir/blob/main/1.18/otp-27-void/Dockerfile)
+- [`1.18.3-otp-27-slim`, `1.18-otp-26-slim`, `latest`](https://github.com/Hentioe/my-docker-elixir/blob/main/1.18/otp-27-slim/Dockerfile)
+- [`1.18.3-otp-27-alpine`, `1.18-otp-26-alpine`](https://github.com/Hentioe/my-docker-elixir/blob/main/1.18/otp-27-alpine/Dockerfile)
+- [`1.18.3-otp-27-void`, `1.18-otp-26-void`](https://github.com/Hentioe/my-docker-elixir/blob/main/1.18/otp-27-void/Dockerfile)
 - [`1.17.3-otp-27-slim`, `1.17-otp-26-slim`, `latest`](https://github.com/Hentioe/my-docker-elixir/blob/main/1.17/otp-27-slim/Dockerfile)
 - [`1.17.3-otp-27-alpine`, `1.17-otp-26-alpine`](https://github.com/Hentioe/my-docker-elixir/blob/main/1.17/otp-27-alpine/Dockerfile)
 - [`1.17.3-otp-27-void`, `1.17-otp-26-void`](https://github.com/Hentioe/my-docker-elixir/blob/main/1.17/otp-27-void/Dockerfile)
@@ -37,9 +37,9 @@ Package the `mix release` artifact into the runner image for deployment. The run
 
 | tag                    | runner base                                        |
 | :--------------------- | :------------------------------------------------- |
-| `1.18.2-otp-27-void`   | `ghcr.io/void-linux/void-glibc-busybox:20250214R1` |
-| `1.18.2-otp-27-alpine` | `alpine:3.21`                                      |
-| `1.18.2-otp-27-slim`   | `debian:bookworm`                                  |
+| `1.18.3-otp-27-void`   | `ghcr.io/void-linux/void-glibc-busybox:20250214R1` |
+| `1.18.3-otp-27-alpine` | `alpine:3.21`                                      |
+| `1.18.3-otp-27-slim`   | `debian:bookworm`                                  |
 | `1.17.3-otp-27-void`   | `ghcr.io/void-linux/void-glibc-busybox:20250214R1` |
 | `1.17.3-otp-27-alpine` | `alpine:3.21`                                      |
 | `1.17.3-otp-27-slim`   | `debian:bookworm`                                  |
@@ -52,10 +52,10 @@ Command Syntax: `elixir build.exs [version] [base]`, where `[version]` represent
 
 _The `[version]` parameter must include the `patch` version number._
 
-Example: Build an image with Elixir version `1.18.2` based on `otp-27-slim`:
+Example: Build an image with Elixir version `1.18.3` based on `otp-27-slim`:
 
 ```bash
-elixir build.exs 1.18.2 otp-27-slim
+elixir build.exs 1.18.3 otp-27-slim
 ```
 
 If the last line of the output shows `ok` it indicates a successful build and test. The resulting image will be named `local/elixir:1.18-otp-27-slim`.
