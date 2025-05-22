@@ -2,7 +2,7 @@ FROM hentioe/erlang:27.3.3-nojit-alpine
 
 ARG TARGETARCH BUILDARCH
 
-ENV ELIXIR_VERSION="v1.18.3" \
+ENV ELIXIR_VERSION="v1.18.4" \
     # elixir expects utf8.
     LANG=C.UTF-8
 
@@ -12,7 +12,7 @@ RUN set -xe \
     export ERL_FLAGS="+JMsingle true"; \
     fi \
     && ELIXIR_DOWNLOAD_URL="https://github.com/elixir-lang/elixir/archive/${ELIXIR_VERSION}.tar.gz" \
-    && ELIXIR_DOWNLOAD_SHA256="f8d4376311058dd9a78ed365fa1df9fd1b22d2468c587e3f0f4fb320283a1ed7" \
+    && ELIXIR_DOWNLOAD_SHA256="8e136c0a92160cdad8daa74560e0e9c6810486bd232fbce1709d40fcc426b5e0" \
     && buildDeps=' \
     ca-certificates \
     curl \
