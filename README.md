@@ -40,14 +40,14 @@ Package the `mix release` artifact into the runner image for deployment. The run
 
 | tag                    | runner base                                        |
 | :--------------------- | :------------------------------------------------- |
-| `1.18.4-otp-28-void`   | `ghcr.io/void-linux/void-glibc-busybox:20250616R2` |
-| `1.18.4-otp-28-alpine` | `alpine:3.21`                                      |
+| `1.18.4-otp-28-void`   | `ghcr.io/void-linux/void-glibc-busybox:20250701R1` |
+| `1.18.4-otp-28-alpine` | `alpine:3.22`                                      |
 | `1.18.4-otp-28-slim`   | `debian:bookworm`                                  |
-| `1.18.4-otp-27-void`   | `ghcr.io/void-linux/void-glibc-busybox:20250616R2` |
-| `1.18.4-otp-27-alpine` | `alpine:3.21`                                      |
+| `1.18.4-otp-27-void`   | `ghcr.io/void-linux/void-glibc-busybox:20250701R1` |
+| `1.18.4-otp-27-alpine` | `alpine:3.22`                                      |
 | `1.18.4-otp-27-slim`   | `debian:bookworm`                                  |
-| `1.17.3-otp-27-void`   | `ghcr.io/void-linux/void-glibc-busybox:20250616R2` |
-| `1.17.3-otp-27-alpine` | `alpine:3.21`                                      |
+| `1.17.3-otp-27-void`   | `ghcr.io/void-linux/void-glibc-busybox:20250701R1` |
+| `1.17.3-otp-27-alpine` | `alpine:3.22`                                      |
 | `1.17.3-otp-27-slim`   | `debian:bookworm`                                  |
 
 ## Local build
