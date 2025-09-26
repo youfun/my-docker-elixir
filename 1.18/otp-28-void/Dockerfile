@@ -45,7 +45,15 @@ RUN set -xe \
 	&& rm elixir-src.tar.gz \
 	# Install runtime dependencies (must be done after cleaning build dependencies). \
 	&& xbps-install -y $RUNTIME_DEPS \
+	# Install development tools \
+	&& xbps-install -y base-devel \
+	    postgresql-client \
+	    inotify-tools \
+	    git \
+	    bash \
+	    openssl \
 	# Clean up Void Linux environment. \
 	&& void-cleanup
+   
 
 CMD ["iex"]
