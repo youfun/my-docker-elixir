@@ -1,4 +1,4 @@
-FROM hentioe/erlang:28.0.2-void
+FROM ghcr.io/youfun/erlang:28-void
 
 ARG TARGETARCH BUILDARCH
 
